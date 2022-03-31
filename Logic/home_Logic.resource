@@ -20,3 +20,6 @@ click button login
 invalid credential appear
     [Arguments]    ${txt_invalid}
     Wait Until Page Contains    ${txt_invalid}    ${timeout} 
+    
+click button forgot password
+    Click Element    ${btn_forgotpassword}    
