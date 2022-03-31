@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.7 on win32)" generated="20220331 11:14:22.919" rpa="false">
+<suite id="s1" name="Automationopenhrm" source="C:\Users\dennypc\eclipse-workspace\automationopenhrm">
+<suite id="s1-s1" name="Test" source="C:\Users\dennypc\eclipse-workspace\automationopenhrm\test">
+<suite id="s1-s1-s1" name="Regression" source="C:\Users\dennypc\eclipse-workspace\automationopenhrm\test\regression.robot">
+<kw name="open chrome browser" library="commons" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20220331 11:14:23.260" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220331 11:14:23.260" endtime="20220331 11:14:29.233"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220331 11:14:29.233" endtime="20220331 11:14:29.355"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:23.259" endtime="20220331 11:14:29.356"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="as a user i could not login with invalid credential">
+<kw name="input username" library="home_Logic">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20220331 11:14:29.358" endtime="20220331 11:14:29.391"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220331 11:14:29.392" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220331 11:14:29.391" endtime="20220331 11:14:29.494"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:29.357" endtime="20220331 11:14:29.495"></status>
+</kw>
+<kw name="input pass" library="home_Logic">
+<arguments>
+<arg>${invalid_password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20220331 11:14:29.497" endtime="20220331 11:14:29.527"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220331 11:14:29.528" level="INFO">Typing text 'admin' into text field 'name=txtPassword'.</msg>
+<status status="PASS" starttime="20220331 11:14:29.527" endtime="20220331 11:14:29.626"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:29.495" endtime="20220331 11:14:29.627"></status>
+</kw>
+<kw name="click button login" library="home_Logic">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20220331 11:14:29.628" level="INFO">Clicking element 'xpath=//input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20220331 11:14:29.628" endtime="20220331 11:14:31.388"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:29.627" endtime="20220331 11:14:31.389"></status>
+</kw>
+<kw name="invalid credential appear" library="home_Logic">
+<arguments>
+<arg>${txt_invalid_credential}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${txt_invalid}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20220331 11:14:31.391" endtime="20220331 11:14:31.407"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:31.389" endtime="20220331 11:14:31.407"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:29.356" endtime="20220331 11:14:31.408" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="as a user i could login with valid credential">
+<kw name="input username" library="home_Logic">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20220331 11:14:31.411" endtime="20220331 11:14:31.435"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220331 11:14:31.436" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220331 11:14:31.436" endtime="20220331 11:14:31.531"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:31.410" endtime="20220331 11:14:31.532"></status>
+</kw>
+<kw name="input pass" library="home_Logic">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20220331 11:14:31.533" endtime="20220331 11:14:31.556"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220331 11:14:31.557" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" starttime="20220331 11:14:31.556" endtime="20220331 11:14:31.657"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:31.532" endtime="20220331 11:14:31.658"></status>
+</kw>
+<kw name="click button login" library="home_Logic">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20220331 11:14:31.659" level="INFO">Clicking element 'xpath=//input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20220331 11:14:31.659" endtime="20220331 11:14:36.400"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:31.658" endtime="20220331 11:14:36.401"></status>
+</kw>
+<kw name="wording Employee Distribution by Subunit appear" library="dashboard_logic">
+<arguments>
+<arg>${txt_employe}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${txt_employee}</arg>
+</arguments>
+<status status="PASS" starttime="20220331 11:14:36.404" endtime="20220331 11:14:36.425"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:36.402" endtime="20220331 11:14:36.426"></status>
+</kw>
+<kw name="marketplace appear" library="dashboard_logic">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${link marketplace}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20220331 11:14:36.427" endtime="20220331 11:14:36.457"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:36.426" endtime="20220331 11:14:36.458"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:31.409" endtime="20220331 11:14:36.458" critical="yes"></status>
+</test>
+<kw name="close chrome browser" library="commons" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220331 11:14:36.461" endtime="20220331 11:14:38.657"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:36.460" endtime="20220331 11:14:38.659"></status>
+</kw>
+<status status="PASS" starttime="20220331 11:14:23.001" endtime="20220331 11:14:38.660"></status>
+</suite>
+<status status="PASS" starttime="20220331 11:14:22.996" endtime="20220331 11:14:38.678"></status>
+</suite>
+<status status="PASS" starttime="20220331 11:14:22.961" endtime="20220331 11:14:38.693"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Automationopenhrm">Automationopenhrm</stat>
+<stat pass="2" fail="0" id="s1-s1" name="Test">Automationopenhrm.Test</stat>
+<stat pass="2" fail="0" id="s1-s1-s1" name="Regression">Automationopenhrm.Test.Regression</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
