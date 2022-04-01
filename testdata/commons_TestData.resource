@@ -1,4 +1,4 @@
 *** Variables ***
 ${url}    https://opensource-demo.orangehrmlive.com/
-${browser}    chrome
+${browser}    chromeheadless
 ${timeout}    10
