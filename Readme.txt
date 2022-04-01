@@ -1,1 +1,1 @@
-ini adalah sample menggunakan POM 
+ini adalah sample menggunakan POM menggunakan robotframework
